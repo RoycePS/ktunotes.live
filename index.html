@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTU Student Community | Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* KTUNOTES Color Palette */
+            --bg-deep-navy: #0a0e17;
+            --bg-card: #151b28;
+            --accent-yellow: #facc15;
+            --accent-yellow-hover: #eab308;
+            --accent-blue: #3b82f6;
+            --text-white: #ffffff;
+            --text-light-blue: #cbd5e1;
+            --text-muted: #94a3b8;
+            --nav-height: 80px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep-navy);
+            color: var(--text-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Global Styles --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        a { text-decoration: none; }
+
+        /* --- Header --- */
+        header {
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-white);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent-blue); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            min-height: calc(85vh - var(--nav-height));
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 24px;
+            /* Subtle shadow to blend with dark theme */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-light-blue);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-yellow {
+            background-color: var(--accent-yellow);
+            color: #000;
+        }
+
+        .btn-yellow:hover {
+            background-color: var(--accent-yellow-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+        }
+
+        /* --- Features Section --- */
+        .features {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-blue);
+            background-color: #1c2331;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+
+        /* --- CTA Banner --- */
+        .cta-banner {
+            margin: 60px 0 100px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 80px 40px;
+            border-radius: 32px;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-note {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 968px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 0;
+            }
+            .hero-text { order: 2; }
+            .hero-image { order: 1; justify-content: center; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">KTU<span>COMMUNITY</span></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>A community built for students, by students.</h1>
+                <p class="hero-subtitle">Notes, resources, updates, and tools trusted by KTU students across Kerala.</p>
+                <button class="btn btn-yellow" onclick="handleRedirect()">
+                    Access KTUNOTES.LIVE &nbsp; →
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="img.webp" alt="Student studying with laptop">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <span class="card-icon">📚</span>
+                <h3>Clean & updated study materials</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">📝</span>
+                <h3>PYQs and model question papers</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">🎓</span>
+                <h3>All semesters & branches covered</h3>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <h3>Fast, free, and distraction-free access</h3>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <h2>Start studying smarter today.</h2>
+            <button class="btn btn-yellow" onclick="handleRedirect()">
+                Go to KTUNOTES.LIVE
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">KTU Student Community — Built by students, for students.</p>
+            <p class="footer-note">This site serves as a gateway and redirects to KTUNOTES.LIVE</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Simple redirect function used by all CTA buttons
+         */
+        function handleRedirect() {
+            window.location.href = "https://ktunotes.live";
+        }
+    </script>
+</body>
+</html>

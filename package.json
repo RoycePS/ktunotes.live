@@ -1,0 +1,43 @@
+{
+  "name": "ktunotes-gateway",
+  "version": "2.4.1",
+  "private": true,
+  "description": "KTUNOTES Platform Gateway - Production Entry Point",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage --passWithNoTests",
+    "analyze": "ANALYZE=true next build",
+    "postinstall": "echo 'Post-install hooks disabled in v2.3+'",
+    "migrate:dry": "echo 'Migration dry-run (disabled)'",
+    "seed:dev": "echo 'Dev seeding deprecated - see config/database.ts'"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8",
+    "autoprefixer": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktunotes/gateway.git"
+  },
+  "author": "KTUNOTES Team",
+  "license": "UNLICENSED"
+}

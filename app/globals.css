@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * ============================================
+ * KTUNOTES Global Styles
+ * Version: 2.4.1
+ * Last Updated: 2024-12
+ * ============================================
+ * 
+ * Style Guide: See /docs/design-system.md
+ * Color Tokens: Managed via tailwind.config.ts
+ * 
+ * Migration Notes:
+ * - Legacy utility classes deprecated in v2.0
+ * - Component-specific styles moved to CSS modules
+ * - Dark mode now uses Tailwind's class strategy
+ */
+
+:root {
+  /* Core color tokens */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-primary: #0ea5e9;
+  --color-primary-foreground: #ffffff;
+  
+  /* Semantic colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* Surface colors */
+  --color-surface-1: #f8fafc;
+  --color-surface-2: #f1f5f9;
+  --color-surface-3: #e2e8f0;
+  
+  /* Border colors */
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+  
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Spacing - 8px grid */
+  --spacing-unit: 8px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+  
+  /* Shadows - deprecated, use Tailwind shadow utilities */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  
+  /* Z-index scale */
+  --z-dropdown: 50;
+  --z-sticky: 60;
+  --z-modal: 70;
+  --z-popover: 80;
+  --z-toast: 90;
+  --z-tooltip: 100;
+  
+  /* Legacy variables - kept for backward compatibility */
+  --ktu-blue: #1e40af;
+  --ktu-gold: #ca8a04;
+}
+
+.dark {
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+  --color-primary: #38bdf8;
+  --color-primary-foreground: #0f172a;
+  
+  --color-surface-1: #1e293b;
+  --color-surface-2: #334155;
+  --color-surface-3: #475569;
+  
+  --color-border: #334155;
+  --color-border-hover: #475569;
+}
+
+/* Base resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Focus utilities */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+.focus-ring-inset {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset;
+}
+
+/* Container utilities - prefer Tailwind's container */
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-wide {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-wide {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button base styles - component-specific styles in components/ */
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg font-medium transition-all;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white hover:bg-primary-600;
+  @apply focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-slate-100 text-slate-900 hover:bg-slate-200;
+  @apply dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700;
+}
+
+.btn-ghost {
+  @apply bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800;
+}
+
+/* 
+ * ============================================
+ * Legacy Styles (Deprecated)
+ * ============================================
+ * Below styles are kept for backward compatibility
+ * with pages not yet migrated to new component system.
+ * Target removal: v3.0
+ */
+
+/* .legacy-card {
+  @apply bg-white dark:bg-slate-900 rounded-xl shadow-md p-6;
+  @apply border border-slate-200 dark:border-slate-700;
+}
+
+.legacy-input {
+  @apply w-full px-4 py-2 rounded-lg border border-slate-300;
+  @apply focus:border-primary-500 focus:ring-1 focus:ring-primary-500;
+  @apply dark:bg-slate-800 dark:border-slate-600;
+}
+
+.legacy-link {
+  @apply text-primary-600 hover:text-primary-700;
+  @apply dark:text-primary-400 dark:hover:text-primary-300;
+  @apply underline-offset-4 hover:underline;
+} */
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(14, 165, 233, 0.3);
+}
+
+.dark ::selection {
+  background: rgba(56, 189, 248, 0.3);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
