@@ -25,7 +25,7 @@ export interface RolePermissions {
  * All available permissions
  */
 export const PERMISSIONS: Record<string, Permission> = {
-    // Notes permissions
+    
     'notes:read': {
         id: 'notes:read',
         name: 'Read Notes',
@@ -55,7 +55,7 @@ export const PERMISSIONS: Record<string, Permission> = {
         action: 'manage',
     },
 
-    // PYQ permissions
+    
     'pyq:read': {
         id: 'pyq:read',
         name: 'Read PYQs',
@@ -78,7 +78,7 @@ export const PERMISSIONS: Record<string, Permission> = {
         action: 'delete',
     },
 
-    // User permissions
+    
     'users:read': {
         id: 'users:read',
         name: 'Read Users',
@@ -101,7 +101,7 @@ export const PERMISSIONS: Record<string, Permission> = {
         action: 'manage',
     },
 
-    // Analytics permissions
+    
     'analytics:read': {
         id: 'analytics:read',
         name: 'Read Analytics',
@@ -117,7 +117,7 @@ export const PERMISSIONS: Record<string, Permission> = {
         action: 'manage',
     },
 
-    // System permissions
+    
     'system:admin': {
         id: 'system:admin',
         name: 'System Admin',

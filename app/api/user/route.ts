@@ -7,7 +7,7 @@ import { NextResponse } from 'next/server';
  * PUT /api/user - Update user profile
  */
 export async function GET() {
-    // Auth required - no session in current implementation
+    
     return NextResponse.json(
         {
             success: false,

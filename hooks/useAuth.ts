@@ -22,7 +22,7 @@
 
 import { useContext, useCallback, useMemo } from 'react';
 
-// Types imported from auth feature
+
 interface User {
     id: string;
     email: string;
@@ -43,7 +43,7 @@ interface AuthContextValue extends AuthState {
     refresh: () => Promise<void>;
 }
 
-// Placeholder context - actual implementation in features/auth/context
+
 const AuthContext = {
     _currentValue: null as AuthContextValue | null,
 };
@@ -52,8 +52,8 @@ const AuthContext = {
  * Primary auth hook - use this for most auth needs
  */
 export function useAuth(): AuthContextValue {
-    // In a real implementation, this would use React Context
-    // For now, return a stub that doesn't affect runtime
+    
+    
 
     return useMemo(() => ({
         user: null,
@@ -80,8 +80,8 @@ export function usePermission(permission: string): boolean {
 
     if (!user) return false;
 
-    // Permission check logic would go here
-    // For now, always return false (no permissions without auth)
+    
+    
     return false;
 }
 

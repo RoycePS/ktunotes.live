@@ -19,45 +19,45 @@
  */
 
 :root {
-  /* Core color tokens */
+  
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   --color-primary: #0ea5e9;
   --color-primary-foreground: #ffffff;
   
-  /* Semantic colors */
+  
   --color-success: #22c55e;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-info: #3b82f6;
   
-  /* Surface colors */
+  
   --color-surface-1: #f8fafc;
   --color-surface-2: #f1f5f9;
   --color-surface-3: #e2e8f0;
   
-  /* Border colors */
+  
   --color-border: #e2e8f0;
   --color-border-hover: #cbd5e1;
   
-  /* Typography */
+  
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  /* Spacing - 8px grid */
+  
   --spacing-unit: 8px;
   
-  /* Transitions */
+  
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 400ms ease;
   
-  /* Shadows - deprecated, use Tailwind shadow utilities */
+  
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   
-  /* Z-index scale */
+  
   --z-dropdown: 50;
   --z-sticky: 60;
   --z-modal: 70;
@@ -65,7 +65,7 @@
   --z-toast: 90;
   --z-tooltip: 100;
   
-  /* Legacy variables - kept for backward compatibility */
+  
   --ktu-blue: #1e40af;
   --ktu-gold: #ca8a04;
 }
@@ -84,7 +84,7 @@
   --color-border-hover: #475569;
 }
 
-/* Base resets */
+
 *,
 *::before,
 *::after {
@@ -136,7 +136,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Focus utilities */
+
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
 }
@@ -145,7 +145,7 @@ h6 {
   @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset;
 }
 
-/* Container utilities - prefer Tailwind's container */
+
 .container-wide {
   width: 100%;
   max-width: 1400px;
@@ -169,7 +169,7 @@ h6 {
   }
 }
 
-/* Animation utilities */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -203,7 +203,7 @@ h6 {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-/* Gradient backgrounds */
+
 .gradient-hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
 }
@@ -215,7 +215,7 @@ h6 {
   background-clip: text;
 }
 
-/* Glass morphism */
+
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -230,7 +230,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Button base styles - component-specific styles in components/ */
+
 .btn {
   @apply inline-flex items-center justify-center rounded-lg font-medium transition-all;
   @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
@@ -277,7 +277,7 @@ h6 {
   @apply underline-offset-4 hover:underline;
 } */
 
-/* Scrollbar styling */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -304,7 +304,7 @@ h6 {
   background: #64748b;
 }
 
-/* Selection styling */
+
 ::selection {
   background: rgba(14, 165, 233, 0.3);
 }
@@ -313,7 +313,7 @@ h6 {
   background: rgba(56, 189, 248, 0.3);
 }
 
-/* Print styles */
+
 @media print {
   .no-print {
     display: none !important;

@@ -27,12 +27,12 @@ export interface FeatureFlag {
  * Core feature flags
  */
 export const FEATURES: Record<string, FeatureFlag> = {
-    // Auth features
+    
     AUTH_OAUTH: {
         id: 'auth_oauth',
         name: 'OAuth Login',
         description: 'Social login with Google, GitHub',
-        enabled: false, // Pending security audit
+        enabled: false, 
         allowedRoles: ['admin', 'super_admin'],
     },
     AUTH_MFA: {
@@ -52,7 +52,7 @@ export const FEATURES: Record<string, FeatureFlag> = {
         replacedBy: 'auth_oauth',
     },
 
-    // Content features
+    
     NOTES_UPLOAD: {
         id: 'notes_upload',
         name: 'User Notes Upload',
@@ -81,12 +81,12 @@ export const FEATURES: Record<string, FeatureFlag> = {
         enabled: false,
     },
 
-    // Calculator features
+    
     SGPA_CALCULATOR: {
         id: 'sgpa_calculator',
         name: 'SGPA Calculator',
         description: 'Calculate SGPA and CGPA',
-        enabled: true, // This is a core feature
+        enabled: true, 
     },
     GRADE_PREDICTOR: {
         id: 'grade_predictor',
@@ -96,7 +96,7 @@ export const FEATURES: Record<string, FeatureFlag> = {
         allowedRoles: ['admin'],
     },
 
-    // Analytics features
+    
     ANALYTICS_DASHBOARD: {
         id: 'analytics_dashboard',
         name: 'Analytics Dashboard',
@@ -112,7 +112,7 @@ export const FEATURES: Record<string, FeatureFlag> = {
         allowedRoles: ['super_admin'],
     },
 
-    // UI features
+    
     DARK_MODE: {
         id: 'dark_mode',
         name: 'Dark Mode',
@@ -127,7 +127,7 @@ export const FEATURES: Record<string, FeatureFlag> = {
         rolloutPercentage: 25,
     },
 
-    // Experimental
+    
     AI_SEARCH: {
         id: 'ai_search',
         name: 'AI-Powered Search',
@@ -150,7 +150,7 @@ export function isFeatureEnabled(featureId: string): boolean {
     const feature = FEATURES[featureId];
     if (!feature) return false;
 
-    // Check environment override
+    
     const envKey = `NEXT_PUBLIC_FEATURE_${featureId.toUpperCase()}`;
     const envValue = process.env[envKey];
     if (envValue !== undefined) {

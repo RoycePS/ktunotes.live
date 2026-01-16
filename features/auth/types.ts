@@ -118,7 +118,7 @@ export interface PasswordResetConfirm {
     confirmPassword: string;
 }
 
-// OAuth types (for future social login)
+
 export interface OAuthProvider {
     id: 'google' | 'github' | 'microsoft';
     name: string;
@@ -132,7 +132,7 @@ export interface OAuthState {
     nonce: string;
 }
 
-// API response types
+
 export interface AuthResponse {
     success: boolean;
     user?: User;

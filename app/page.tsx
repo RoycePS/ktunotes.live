@@ -16,22 +16,22 @@ export default function HomePage() {
 
     const handleEnterClick = () => {
         setIsRedirecting(true);
-        // Small delay for visual feedback before redirect
+        
         setTimeout(() => {
-            window.location.href = 'https://ktunotes.live';
+            window.location.href = 'https:
         }, 300);
     };
 
     return (
         <main className="min-h-screen gradient-hero flex flex-col items-center justify-center relative overflow-hidden">
-            {/* Background decoration */}
+            {}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 -left-20 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-3xl" />
             </div>
 
-            {/* Grid pattern overlay */}
+            {}
             <div
                 className="absolute inset-0 opacity-[0.02]"
                 style={{
@@ -41,9 +41,9 @@ export default function HomePage() {
                 }}
             />
 
-            {/* Main content */}
+            {}
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto animate-fade-in">
-                {/* Logo/Brand */}
+                {}
                 <div className="mb-8">
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-4">
                         <span className="gradient-text">KTU</span>
@@ -52,14 +52,14 @@ export default function HomePage() {
                     <div className="h-1 w-32 mx-auto bg-gradient-to-r from-primary-400 via-purple-500 to-pink-500 rounded-full" />
                 </div>
 
-                {/* Tagline */}
+                {}
                 <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
                     Your comprehensive resource for{' '}
                     <span className="text-white font-medium">KTU study materials</span>,{' '}
                     notes, and previous year questions.
                 </p>
 
-                {/* CTA Button */}
+                {}
                 <button
                     onClick={handleEnterClick}
                     disabled={isRedirecting}
@@ -99,16 +99,16 @@ export default function HomePage() {
                     )}
                 </button>
 
-                {/* Secondary info */}
+                {}
                 <p className="mt-8 text-sm text-slate-500">
                     Free access to study materials for all KTU students
                 </p>
             </div>
 
-            {/* Bottom decoration */}
+            {}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
 
-            {/* Floating particles - subtle decoration */}
+            {}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {[...Array(5)].map((_, i) => (
                     <div

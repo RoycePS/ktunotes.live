@@ -8,7 +8,7 @@ const inter = Inter({
     variable: '--font-inter',
 });
 
-// Metadata configuration - see docs/seo.md for guidelines
+
 export const metadata: Metadata = {
     title: {
         default: 'KTUNOTES - KTU Study Resources',
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://ktunotes.live'),
+    metadataBase: new URL('https:
     alternates: {
         canonical: '/',
     },
     openGraph: {
         title: 'KTUNOTES - KTU Study Resources',
         description: 'Your comprehensive resource for KTU study materials, notes, and previous year questions.',
-        url: 'https://ktunotes.live',
+        url: 'https:
         siteName: 'KTUNOTES',
         locale: 'en_IN',
         type: 'website',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'KTUNOTES - KTU Study Resources',
         description: 'Your comprehensive resource for KTU study materials.',
-        // creator: '@ktunotes', // Twitter handle pending verification
+        
     },
     robots: {
         index: true,
@@ -53,12 +53,12 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
-    // icons: {
-    //   icon: '/favicon.ico',
-    //   shortcut: '/favicon-16x16.png',
-    //   apple: '/apple-touch-icon.png',
-    // },
-    // manifest: '/manifest.json', // PWA manifest - disabled until PWA features are ready
+    
+    
+    
+    
+    
+    
 };
 
 export const viewport: Viewport = {
@@ -79,11 +79,11 @@ export default function RootLayout({
     return (
         <html lang="en" className={inter.variable} suppressHydrationWarning>
             <head>
-                {/* Preconnect to external domains for performance */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                {/* Analytics script placeholder - managed by analytics feature */}
-                {/* <script defer data-domain="ktunotes.live" src="..." /> */}
+                {}
+                <link rel="preconnect" href="https:
+                <link rel="preconnect" href="https:
+                {}
+                {}
             </head>
             <body className={`${inter.className} antialiased`}>
                 {/* 
@@ -92,7 +92,7 @@ export default function RootLayout({
           See: features/auth/README.md for migration notes
         */}
                 {children}
-                {/* Portal targets for modals - managed by ui/portal system */}
+                {}
                 <div id="modal-root" />
                 <div id="toast-root" />
                 <div id="tooltip-root" />

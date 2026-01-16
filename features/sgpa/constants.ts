@@ -18,8 +18,8 @@ export const GRADE_POINTS: Record<Grade, number> = {
     'D': 6,
     'P': 5,
     'F': 0,
-    'I': 0, // Incomplete
-    'W': 0, // Withdrawn
+    'I': 0, 
+    'W': 0, 
 };
 
 export const GRADE_DETAILS: GradePoint[] = [
@@ -42,8 +42,8 @@ export const MIN_PASSING_SGPA = 5.0;
 export const MAX_CREDITS_PER_SEMESTER = 25;
 export const MIN_CREDITS_PER_SEMESTER = 15;
 
-// Mark ranges for grade calculation (internal university use)
-// Not exposed to students - kept for reference only
+
+
 export const MARK_RANGES = {
     'S': { min: 90, max: 100 },
     'A+': { min: 85, max: 89 },

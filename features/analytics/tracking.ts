@@ -17,7 +17,7 @@
 
 import type { AnalyticsEvent, EventCategory, PageView } from './types';
 
-// Analytics state - initialized by AnalyticsProvider
+
 let isInitialized = false;
 let sessionId: string | null = null;
 
@@ -55,13 +55,13 @@ export function trackEvent(
         sessionId: sessionId!,
     };
 
-    // In production, this would send to analytics backend
+    
     if (process.env.NODE_ENV === 'development') {
         console.log('[Analytics] Event:', event);
     }
 
-    // TODO: Implement actual event submission
-    // sendToAnalyticsBackend(event);
+    
+    
 }
 
 /**
@@ -85,7 +85,7 @@ export function trackPageView(path: string, title?: string): void {
         console.log('[Analytics] Page view:', pageView);
     }
 
-    // TODO: Implement actual page view submission
+    
 }
 
 /**

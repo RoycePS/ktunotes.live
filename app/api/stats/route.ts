@@ -8,8 +8,8 @@ import { NextResponse } from 'next/server';
  * Returns platform statistics (admin only, currently disabled)
  */
 export async function GET(request: Request) {
-    // Feature flag: ANALYTICS_DASHBOARD disabled
-    // See: config/features.ts
+    
+    
 
     return NextResponse.json(
         {
@@ -29,6 +29,6 @@ export async function GET(request: Request) {
  * Submit analytics event (internal use)
  */
 export async function POST(request: Request) {
-    // Analytics collection paused pending GDPR review
+    
     return NextResponse.json({ success: true, queued: false });
 }

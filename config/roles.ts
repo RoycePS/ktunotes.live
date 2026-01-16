@@ -10,7 +10,7 @@ export interface Role {
     id: string;
     name: string;
     description: string;
-    level: number; // Higher = more privileges
+    level: number; 
     inheritsFrom?: string;
     isDefault?: boolean;
     isSystemRole?: boolean;

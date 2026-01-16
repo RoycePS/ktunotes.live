@@ -10,7 +10,7 @@
  * - Custom self-hosted
  */
 
-const ANALYTICS_ENDPOINT = process.env.ANALYTICS_ENDPOINT || 'https://analytics.ktunotes.live/api/event';
+const ANALYTICS_ENDPOINT = process.env.ANALYTICS_ENDPOINT || 'https:
 const ANALYTICS_SITE_ID = process.env.ANALYTICS_SITE_ID || 'ktunotes.live';
 
 interface AnalyticsEvent {
@@ -93,7 +93,7 @@ export async function trackSearch(query: string, resultCount: number): Promise<b
         name: 'search',
         url: '/search',
         props: {
-            query: query.substring(0, 100), // Truncate for privacy
+            query: query.substring(0, 100), 
             resultCount,
         },
     });

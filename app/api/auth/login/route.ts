@@ -9,8 +9,8 @@ import { NextResponse } from 'next/server';
  * This endpoint returns a placeholder response.
  */
 export async function POST(request: Request) {
-    // Auth functionality temporarily disabled
-    // See: SEC-1247 for security audit timeline
+    
+    
 
     return NextResponse.json(
         {

@@ -61,7 +61,7 @@ export interface GradeSchema {
     };
 }
 
-// Form types
+
 export interface SubjectInput {
     code: string;
     name: string;

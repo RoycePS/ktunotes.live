@@ -4,7 +4,7 @@
  * Shared types used across the application.
  */
 
-// API Response types
+
 export interface ApiResponse<T = unknown> {
     success: boolean;
     data?: T;
@@ -26,7 +26,7 @@ export interface ResponseMeta {
     hasMore?: boolean;
 }
 
-// Pagination
+
 export interface PaginationParams {
     page?: number;
     limit?: number;
@@ -42,19 +42,19 @@ export interface PaginatedResult<T> {
     hasMore: boolean;
 }
 
-// Common entity types
+
 export interface BaseEntity {
     id: string;
     createdAt: Date;
     updatedAt: Date;
 }
 
-// Branch and semester types
+
 export type Branch = 'CSE' | 'ECE' | 'EEE' | 'ME' | 'CE' | 'IT' | 'AI' | 'AIDS' | 'AIML';
 export type Semester = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 export type CurriculumYear = '2015' | '2019' | '2019R' | '2024';
 
-// UI Component types
+
 export interface SelectOption {
     value: string;
     label: string;
@@ -70,7 +70,7 @@ export interface MenuItem {
     badge?: string;
 }
 
-// Form types
+
 export type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export interface FormState<T> {

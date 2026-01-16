@@ -70,7 +70,7 @@ export function useUser(): UseUserReturn {
     const updateProfile = useCallback(async (data: Partial<UserProfile>) => {
         setIsUpdating(true);
         try {
-            // API call would go here
+            
             console.warn('[useUser] Profile update not implemented');
             await new Promise(resolve => setTimeout(resolve, 500));
         } catch (err) {

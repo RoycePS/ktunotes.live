@@ -27,7 +27,7 @@
 import { useMemo, useCallback } from 'react';
 import { useAuth } from './useAuth';
 
-// Permission types
+
 type Permission =
     | 'read:notes'
     | 'write:notes'
@@ -43,7 +43,7 @@ type Permission =
 
 type Role = 'student' | 'contributor' | 'moderator' | 'admin' | 'super_admin';
 
-// Role-permission mapping
+
 const ROLE_PERMISSIONS: Record<Role, Permission[]> = {
     student: ['read:notes', 'read:pyq'],
     contributor: ['read:notes', 'write:notes', 'read:pyq', 'write:pyq'],
